@@ -10,6 +10,18 @@ public class SavingAccount extends Account{
         }else {
             able = true;
         }
+    }
+    public boolean isAble() {
+        return able;
+    }
+
+    public void consign(int dep){
+        if (able == true){
+            this.balance -= dep;
+            System.out.println("Se han consignado $" + dep);
+        }else {
+            System.out.println("No fue posible consignar, debido a que su cuenta está inactiva");
+        }
 
     }
 
