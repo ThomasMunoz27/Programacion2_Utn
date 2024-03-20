@@ -12,7 +12,7 @@ public class Main {
 
         ArrayList<Vehicle> listVehicle = new ArrayList<>(Arrays.asList(car1, bike1, van1, moto1));
 
-        catalog(listVehicle, 4);
+        catalog(listVehicle);
 
     }
 
