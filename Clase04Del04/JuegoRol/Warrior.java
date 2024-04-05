@@ -7,23 +7,33 @@ package Clase04Del04.JuegoRol;
  */
 public class Warrior extends BaseCharacter {
 
-	private int potion;
 	private int rage;
 
 
-	public Warrior(boolean alive, int armor, int level, int magArmor, String name, int ps, int potion, int rage) {
-		super(alive, armor, level, magArmor, name, ps);
-		this.potion = potion;
+	public Warrior(boolean alive, int armor, int level, int magArmor, String name, int ps, int dmg, int rage) {
+		super(alive, armor, level, magArmor, name, ps, dmg);
 		this.rage = rage;
 	}
-
+@Override
 	public int attack(){
-		return 0;
+		if (!this.isAlive()){
+			System.out.println(this.getName() + " no puede atacar porque está muerto");
+			return 0;
+		}else {
+			if (this.rage >= 50){
+				riseAttack();
+			}
+			System.out.println("El Guerrero " + this.getName() + " ha atacado");
+			this.rage += 10;
+			return this.getDmg();
+		}
 	}
 
 
-	public void usePotion(int cantPotions){
-
+	public void riseAttack(){
+		System.out.println("El guerrero "+ this.getName() +" se ha enfurecido y aumentó su ataque");
+		this.setDmg(this.getDmg()*2);
+		this.rage = 0;
 	}
 
 }
