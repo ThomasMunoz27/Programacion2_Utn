@@ -1,17 +1,24 @@
 package Clase_9_4.AsociacionUnidireccional;
 
 public class Universidad {
-    private String nombreUni;
+    String nombreUniversidad;
 
-    public Universidad(String nombreUni) {
-        this.nombreUni = nombreUni;
+
+    public String getNombreUniversidad() {
+        return nombreUniversidad;
     }
 
-    public String getNombreUni() {
-        return nombreUni;
+
+    public void setNombreUniversidad(String nombreUniversidad) {
+        this.nombreUniversidad = nombreUniversidad;
     }
 
-    public void setNombreUni(String nombreUni) {
-        this.nombreUni = nombreUni;
+
+    public Universidad() {
+    }
+
+
+    public Universidad(String nombreUniversidad) {
+        this.nombreUniversidad = nombreUniversidad;
     }
 }

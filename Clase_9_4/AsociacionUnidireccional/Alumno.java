@@ -1,27 +1,51 @@
 package Clase_9_4.AsociacionUnidireccional;
 
 public class Alumno {
-    private String nombre;
-    private Universidad Universidad;
+    String nombre;
+    Universidad universidadAsiste;
 
-    public Alumno(String nombre, Universidad universidad) {
-        this.nombre = nombre;
-        Universidad = universidad;
-    }
+
+
 
     public String getNombre() {
         return nombre;
     }
 
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public Universidad getUniversidad() {
-        return Universidad;
+
+    public Universidad getUniversidadAsiste() {
+        return universidadAsiste;
     }
 
-    public void setUniversidad(Universidad universidad) {
-        Universidad = universidad;
+
+    public void setUniversidadAsiste(Universidad universidadAsiste) {
+        this.universidadAsiste = universidadAsiste;
     }
+
+
+    public Alumno(){};
+    public Alumno(String nombre, Universidad universidadAsiste) {
+        this.nombre = nombre;
+        this.universidadAsiste = universidadAsiste;
+    }
+
+    public void showUni(){
+        System.out.println("El estudiante " + nombre + " asiste a la universidad " + this.universidadAsiste.getNombreUniversidad());
+    }
+
+    public void cambiarUniversidad(Universidad universidad){
+        this.setUniversidadAsiste(universidad);
+    }
+
+
+
+
+
+
+
+
 }
