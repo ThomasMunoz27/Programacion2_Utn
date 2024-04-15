@@ -1,4 +1,4 @@
-package TPs.Tp2;
+package TPs.Tp2.EJ1;
 
 public class Cat extends Animal{
     private String race;
