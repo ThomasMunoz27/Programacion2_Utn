@@ -36,6 +36,7 @@ public class SavingAccount extends Account{
         if (able) {
             if (newBalance >= 0) {
                 balance -= amount;
+                System.out.println("Se han retirado "+ amount + " de su cuenta de ahorros");
                 numberWithdrawals++;
                 if (balance < 10000){
                     able = false;
@@ -51,7 +52,8 @@ public class SavingAccount extends Account{
     @Override
     public void monthlyStatement(){
         if (numberWithdrawals > 4){
-            balance -= (numberWithdrawals - 4) *1000;
+            this.monthlyCommission = (numberWithdrawals - 4) *1000;
+            balance -= monthlyCommission;
         }
         if (balance < 10000){
             able = false;
