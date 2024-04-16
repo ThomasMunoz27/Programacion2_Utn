@@ -1,4 +1,4 @@
-package Clase_16_04;
+package Clase_16_04.Iteradores;
 
 import java.util.ArrayList;
 import java.util.Iterator;

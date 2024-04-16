@@ -1,4 +1,4 @@
-package Clase_16_04;
+package Clase_16_04.Iteradores;
 
 public class Jugador {
     private String nombre;
