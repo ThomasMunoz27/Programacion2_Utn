@@ -1,4 +1,4 @@
-package TPs.Tp3;
+package TPs.Tp3.Ej1;
 
 import java.util.ArrayList;
 

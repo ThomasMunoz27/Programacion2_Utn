@@ -1,4 +1,4 @@
-package TPs.Tp3;
+package TPs.Tp3.Ej1;
 
 public abstract class Person {
     private int dni;

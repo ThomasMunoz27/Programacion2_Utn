@@ -1,6 +1,8 @@
 package Clase_16_04.Iteradores;
 
-public class Jugador {
+import java.util.Iterator;
+
+public class Jugador implements Iterable{
     private String nombre;
     private String posicion;
     private int numeroCamiseta;
@@ -37,5 +39,10 @@ public class Jugador {
 
     public void showDetails(){
         System.out.println(this.nombre + ", posicion: " + this.posicion + ", numero: " + this.numeroCamiseta);
+    }
+
+    @Override
+    public Iterator iterator() {
+        return iterator();
     }
 }

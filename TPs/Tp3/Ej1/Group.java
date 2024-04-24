@@ -1,4 +1,4 @@
-package TPs.Tp3;
+package TPs.Tp3.Ej1;
 
 import java.util.ArrayList;
 
@@ -53,6 +53,10 @@ public class Group {
         this.alumns.add(new Alumn(dni, name));
         this.alumns.get(this.alumns.size() - 1).addGroup(this);
 
+    }
+
+    public void addSignature(Signature sign){
+        this.signatures.add(sign);
     }
 
 

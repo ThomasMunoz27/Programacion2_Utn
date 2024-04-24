@@ -1,6 +1,4 @@
-package TPs.Tp3;
-
-import java.util.ArrayList;
+package TPs.Tp3.Ej1;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,6 +23,8 @@ public class Main {
         g2.addAlumns(94219667, "Thomas");
         g3.addAlumns(94219667, "Thomas");
 
+        g1.addSignature(s1);
+
         s2.setGroup(g1);
         s3.setGroup(g1);
         s1.setGroup(g2);
@@ -44,8 +44,24 @@ public class Main {
         }
 
         //d
+        /*
         System.out.println(" waos " +g1.getAlumns().get(1).getName());
-        //System.out.println(" waos " +g1.getAlumns().get(1).getGropus().get(2).getLetter());
+        System.out.println(" waos 2 " +g1.getAlumns().get(1).getGropus().get(2).getLetter());
 
+         */
+
+        //e
+
+        for(Signature s : g1.getAlumns().get(1).getGropus().get(0).getSignatures()){
+            System.out.println("Las asignaturas son : " + s.getName());
+        }
+
+        //f
+        System.out.println("El profesor es: " + g1.getSignatures().get(0).getProfessor().getName());
+
+        //g
+        for (Alumn alumn : p1.getSignature().get(1).getGroup().getAlumns()){
+            System.out.println(alumn.getName());
+        }
     }
 }
