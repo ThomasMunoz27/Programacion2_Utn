@@ -22,9 +22,11 @@ public class TaskList implements Iterable<Task> {
 
     public void addTask(String description, int prio) {
         tasks.add(new Task(description, prio));
+        System.out.println("Se añadió una tarea");
     }
 
     public void removeTask(String description) {
+        int cantTask = tasks.size();
         Task toRemove = null;
         for (Task task : getTasks()) {
             if (task.getDescription().equals(description)) {
@@ -32,7 +34,13 @@ public class TaskList implements Iterable<Task> {
             }
         }
         tasks.remove(toRemove);
-        System.out.println("Se borró la tarea exitosamente");
+        if (cantTask == tasks.size()){
+            System.out.println("No se pudo borrar la tarea");
+
+        }else {
+            System.out.println("Se borró la tarea exitosamente");
+        }
+
     }
 
     public void showCantTasks() {
@@ -40,6 +48,7 @@ public class TaskList implements Iterable<Task> {
     }
 
     public void showTasks() {
+        System.out.println("Mostrando tareas por orden de prioridad");
         ArrayList<Integer> priorities = new ArrayList<Integer>();
         for (Task toDo : tasks) {
             priorities.add(toDo.getPriority());
@@ -57,6 +66,7 @@ public class TaskList implements Iterable<Task> {
                 } else {
                     higher--;
                 }
+
         }
 
     }
