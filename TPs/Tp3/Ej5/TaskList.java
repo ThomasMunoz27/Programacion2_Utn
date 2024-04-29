@@ -40,6 +40,7 @@ public class TaskList implements Iterable<Task> {
     }
 
     public void showTasks() {
+
         ArrayList<Integer> priorities = new ArrayList<Integer>();
         for (Task toDo : tasks) {
             priorities.add(toDo.getPriority());
